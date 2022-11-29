@@ -8,9 +8,9 @@
   },
   "displayName": "Cosmoteer-Rules",
   "description": "Language support for the Cosmoteer .rules file.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
-    "vscode": "^1.72.0"
+    "vscode": "^1.6.0"
   },
   "categories": [
     "Programming Languages"
