@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Cosmoteer Rules",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+    {
+      "include": "#comment"
+    }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.cosmoteer-rules",
+				"match": "\\b(if|while|for|return)\\b"
+			},
+      {
+        "name": "support.class",
+        "match": "(^\\w+\\b)(?! =)|(?<=: )\\w+\\b|(\\w+\\b)(?= :)"
+      },
+      {
+        "name": "support.variable",
+        "match": "\\w+(?=\\s*=)"
+      },
+      {
+        "name": "constant.numeric",
+        "match": "\\b\\d+"
+      },
+      {
+        "name": "entity.name.function",
+        "match": "&\\w+\\b"
+      }]
+		},
+		"strings": {
+			"name": "string.quoted.double.cosmoteer-rules",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cosmoteer-rules",
+					"match": "\\\\."
+				}
+			]
+		},
+    "comment": {
+      "patterns": [{
+        "name": "comment.line.double-slash",
+        "begin": "//",
+        "end": "$"
+      }]
+    }
+	},
+	"scopeName": "source.rules"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "cosmoteer-rules",
+  "publisher": "Ataxica",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SaViGnAnO/cosmoteer-rules.git"
+  },
+  "displayName": "Cosmoteer-Rules",
+  "description": "Language support for the Cosmoteer .rules file.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "cosmoteer-rules",
+      "aliases": ["Cosmoteer Rules", "cosmoteer-rules"],
+      "extensions": [".rules"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "cosmoteer-rules",
+      "scopeName": "source.rules",
+      "path": "./syntaxes/cosmoteer-rules.tmLanguage.json"
+    }]
+  }
+}
